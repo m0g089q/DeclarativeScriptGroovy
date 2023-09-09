@@ -16,13 +16,14 @@ pipeline {
             steps {
                 echo 'Job pipeline three'
             }
-        }
-	 post {
+
+	    post {
                 
                 success {
                  emailext body: 'Build succeeded', subject: 'Build succeeded', to: 'muthuraj.gopal@walmart.com'
               	 //echo "some stage failed..pls check"
                 }
-         }
+             }
+        }
     }
 }
